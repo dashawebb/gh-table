@@ -1,8 +1,136 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  margin: 42px;
 }
 
-.App-logo {
+.App-header {
+  font-family: OpenSans-Bold;
+  font-size: 26px;
+  color: #333333;
+  text-align: left;
+  line-height: 22px;
+}
+
+a { 
+  display: block;
+  color: inherit; 
+  text-decoration: none;
+} 
+
+svg {
+  display: inline;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table, td, th {
+  border-collapse:collapse;
+  /* bottom-border: 1px solid #000000; */
+}
+
+.container {
+  font-family: OpenSans-Regular;
+}
+
+.table {
+  /* width: 100%; */
+  border: 1px solid #D8D8D8;
+  border-spacing: 0px;
+}
+
+table.fixed {table-layout:fixed; width:1351px;}/*Setting the table width is important!*/
+table.fixed td {overflow:hidden;}/*Hide text outside the cell.*/
+table.fixed td:nth-of-type(1) {width:9px;}/*Setting the width of column 1.*/
+table.fixed td:nth-of-type(2) {width:104px;}/*Setting the width of column 2.*/
+table.fixed td:nth-of-type(3) {width:162px;}/*Setting the width of column 3.*/
+table.fixed td:nth-of-type(4) {width:189px;}/*Setting the width of column 4.*/
+table.fixed td:nth-of-type(5) {width:767px;}/*Setting the width of column 5.*/
+table.fixed td:nth-of-type(6) {width:130px;}/*Setting the width of column 6.*/
+
+.table__header {
+  height: 30px;
+  margin-left: 9px;
+  /* display: flex; */
+  border-bottom: 2px solid #E0E0E2;
+  font-size: 14px;
+  color: #757575;
+  text-align: left;
+  line-height: 16px;
+}
+
+.table__row {
+  /* display: flex; */
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  line-height: 30px;
+  border: 1px solid #E0E0E2;
+  /* border-collapse: collapse; */
+}
+
+.table__row__item {
+  /* width: 100%; */
+}
+
+.table__row:hover {
+  background-color: #EBF6EA;
+}
+
+.table__row--col-2 {
+  font-family: OpenSans-Bold;
+}
+
+.nav__panel {
+  display: flex;
+  margin-top: 24px;
+}
+
+.nav__button {
+  width: 32px;
+  height: 32px;
+  /* background: #333333; */
+  border-radius: 3px;
+  /* font-family: OpenSans-Regular; */
+  font-size: 15px;
+  color: #333333;
+  text-align: center;
+  line-height: 30px;
+}
+
+.nav__button--selected {
+  background: #333333;
+  border-radius: 3px;
+}
+
+.nav__button :hover {
+  background-color: #EBF6EA;
+}
+
+.search__bar {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.search__field {
+  height: 24px;
+}
+
+.submit-button {
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #333333;
+  text-align: left;
+  line-height: 20px;
+  border-radius: 5px;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +163,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
