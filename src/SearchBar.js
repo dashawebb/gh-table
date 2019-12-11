@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const SearchBar = ({ handleUserQuery }) => {
     const [value, setValue] = useState('');
@@ -8,7 +8,7 @@ const SearchBar = ({ handleUserQuery }) => {
     }
 
     const handleSubmit = event => {
-        alert('A name was submitted: ' + value);
+        alert('A string was submitted: ' + value);
         handleUserQuery(value);
         event.preventDefault();
     };
@@ -16,8 +16,8 @@ const SearchBar = ({ handleUserQuery }) => {
     return (
         <div className="search__bar">
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Search by ID" value={value} onChange={handleChange} className="search__field"/>
-                    {/* <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <input type="text" placeholder="Search by ID" value={value} onChange={handleChange} className="search__field" />
+                {/* <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                             <g id="Задание-верстка-2" transform="translate(-340.000000, -1061.000000)">
                                 <rect id="Rectangle-Copy-41" stroke="#E0E0E2" fill="#FFFFFF" x="244.5" y="1050.5" width="117" height="31"></rect>

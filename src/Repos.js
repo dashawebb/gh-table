@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Repos = ( {repos, loading }) => {
+const Repos = ({ repos, loading }) => {
     if (loading) {
         return <h2 className="App-header">Loading...</h2>;
     }
@@ -20,14 +20,14 @@ const Repos = ( {repos, loading }) => {
                 {repos.map(item => (
                     <tr className="table__row" key={item.id}>
                         <td></td>
-                        <td key={item.id} className="table__row__item">
+                        <td>
                             {item.id}
                         </td>
-                        <td key={item.id + 'div'} className="table__row__item table__row--col-2">
+                        <td className="table__row--col-2">
                             {item.owner.login}
                         </td>
-                        <td className="table__row__item">
-                            <img src={item.owner.avatar_url} width="25px" height="25px" />
+                        <td>
+                            <img src={item.owner.avatar_url} width="25px" height="25px" alt="" />
                         </td>
                         <td></td>
                         <td></td>
@@ -35,21 +35,6 @@ const Repos = ( {repos, loading }) => {
                 ))}
             </tbody>
         </table>
-        // <div>
-        //     {repos.map(item => (
-        //         <tr className="table__row">
-        //             <td key={item.id} className="table__row__item">
-        //                 {item.id}
-        //             </td>
-        //             <td key={item.id + 'div'} className="table__row__item table__row--col-2">
-        //                 {item.owner.login}                        
-        //                 </td>
-        //             <td className="table__row__item">
-        //                 <img src={item.owner.avatar_url} width="30px" height="30px" />
-        //             </td>
-        //         </tr>
-        //     ))}
-        // </div>
     );
 };
 export default Repos;

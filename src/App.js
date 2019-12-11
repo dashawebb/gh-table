@@ -17,12 +17,12 @@ function App() {
   const [totalRepos, setTotalRepos] = useState(0);
   const [userQuery, setUserQuery] = useState('');
 
-  const paginate = (pageNumber) => { 
-    fetchRepos(pageNumber); // если здесь use CurrentPage -> тогда беда
+  const paginate = (pageNumber) => {
+    fetchRepos(pageNumber);
   }
 
   const handleUserQuery = (query) => {
-    searchByName(query);
+    searchById(query);
   }
 
   useEffect(() => {
@@ -47,18 +47,6 @@ function App() {
       }
     }
     getReposNumber();
-
-    // const fetchRepos = async () => {
-    //   try {
-    //     setLoading(true);
-    //     const res = await axios.get(`https://api.github.com/users/${USER}/repos?page=1&per_page=100`);
-    //     setRepos(res.data);
-    //     setLoading(false);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    // fetchRepos();
   }, []);
 
   const fetchRepos = async (currentPage) => {
@@ -73,13 +61,16 @@ function App() {
     }
   }
 
-  const searchByName = async (query) => {
+  const searchById = async (query) => {
     try {
       setUserQuery(query);
-      setLoading(true);
-      const res = await axios.get(`https://api.github.com/search/repositories?q=${userQuery}+user:${USER}`);
-      setRepos(res.data.items.slice(0, reposPerPage));
-      setLoading(false);
+      // setLoading(true);
+      // request below allows to find all the repositories of a specific user with a specific name
+      // const res = await axios.get(`https://api.github.com/search/repositories?q=${userQuery}+user:${USER}`);
+      // setRepos(res.data.items.slice(0, reposPerPage));
+      const filtered = repos.filter(repo => repo.id.toString().indexOf(query) >= 0);
+      setRepos(filtered);
+      // setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -90,8 +81,6 @@ function App() {
   // const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   // const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
 
-  // console.log(repos);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -101,8 +90,16 @@ function App() {
       </header>
       <SearchBar handleUserQuery={handleUserQuery} />
       <div className="container">
-        <Repos repos={repos} loading={loading} />
-        <Pagination reposPerPage={reposPerPage} totalRepos={totalRepos} paginate={paginate} />
+        <Repos
+          repos={repos}
+          loading={loading}
+        />
+        <Pagination
+          reposPerPage={reposPerPage}
+          totalRepos={totalRepos}
+          paginate={paginate}
+          currentPage={currentPage}
+        />
       </div>
     </div>
   );
