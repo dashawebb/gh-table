@@ -19,6 +19,7 @@ a {
 
 svg {
   display: inline;
+  vertical-align: middle;
 }
 
 img {
@@ -28,6 +29,29 @@ img {
 table, td, th {
   border-collapse:collapse;
   /* bottom-border: 1px solid #000000; */
+}
+
+input:focus, a:focus {
+  outline: none;
+}
+
+input:focus, input:active, a:focus {
+  border-color: transparent;
+  border-bottom: 2px solid #1c87c9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#react-paginate ul {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#react-paginate li {
+  display: inline-block;
 }
 
 .container {
@@ -78,8 +102,14 @@ table.fixed td:nth-of-type(6) {width:130px;}/*Setting the width of column 6.*/
 }
 
 .nav__panel {
-  display: flex;
+  display: inline-block;
+  padding: 0;
   margin-top: 24px;
+}
+
+.nav__panel>li {
+  float: left;
+  margin-right: 3px;
 }
 
 .nav__button {
@@ -90,6 +120,7 @@ table.fixed td:nth-of-type(6) {width:130px;}/*Setting the width of column 6.*/
   color: #333333;
   text-align: center;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .nav__button :hover {
@@ -108,6 +139,7 @@ table.fixed td:nth-of-type(6) {width:130px;}/*Setting the width of column 6.*/
 
 .search__field {
   height: 24px;
+  /* border-bottom: 1px solid #E0E0E2; */
 }
 
 .submit-button {

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ handleUserQuery }) => {
+const SearchBar = ({ handleUserQuery, fetchRepos }) => {
     const [value, setValue] = useState('');
 
     const handleChange = event => {
         setValue(event.target.value);
+        if (event.target.value === '') fetchRepos();
     }
 
     const handleSubmit = event => {
-        alert('A string was submitted: ' + value);
         handleUserQuery(value);
         event.preventDefault();
     };
