@@ -1,0 +1,67 @@
+.AppHeader {
+    font-family: OpenSans-Bold;
+    font-size: 26px;
+    color: #333333;
+    text-align: left;
+    line-height: 22px;
+}
+
+.table {
+    border: 1px solid #D8D8D8;
+    border-spacing: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.col1 {
+    min-width: 9px;
+}
+
+.col2 {
+    min-width: 104px;
+}
+
+.col3 {
+    min-width: 162px;
+}
+
+.col4 {
+    min-width: 189px;
+}
+
+.col5 {
+    min-width: 767px;
+}
+
+.col6 {
+    min-width: 130px;
+}
+
+.header {
+    height: 30px;
+    margin-left: 9px;
+    border: 1px solid #E0E0E2;
+    border-bottom: 2px solid #E0E0E2;
+    font-size: 14px;
+    color: #757575;
+    text-align: left;
+    line-height: 16px;
+}
+
+.row {
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    line-height: 30px;
+    border: 1px solid #E0E0E2;
+    /* border-collapse: collapse; */
+}
+
+.row:hover {
+    background-color: #EBF6EA;
+}
+
+.col2Text {
+    font-family: OpenSans-Bold;
+}

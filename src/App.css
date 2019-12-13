@@ -1,6 +1,7 @@
 .App {
-  /* text-align: center; */
   margin: 42px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-header {
@@ -28,7 +29,6 @@ img {
 
 table, td, th {
   border-collapse:collapse;
-  /* bottom-border: 1px solid #000000; */
 }
 
 input:focus, a:focus {
@@ -44,113 +44,6 @@ ul {
   list-style-type: none;
 }
 
-#react-paginate ul {
-  display: inline-block;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#react-paginate li {
-  display: inline-block;
-}
-
 .container {
   font-family: OpenSans-Regular;
-}
-
-.table {
-  /* width: 100%; */
-  border: 1px solid #D8D8D8;
-  border-spacing: 0px;
-}
-
-table.fixed {table-layout:fixed; width:1351px;}/*Setting the table width is important!*/
-table.fixed td {overflow:hidden;}/*Hide text outside the cell.*/
-table.fixed td:nth-of-type(1) {width:9px;}/*Setting the width of column 1.*/
-table.fixed td:nth-of-type(2) {width:104px;}/*Setting the width of column 2.*/
-table.fixed td:nth-of-type(3) {width:162px;}/*Setting the width of column 3.*/
-table.fixed td:nth-of-type(4) {width:189px;}/*Setting the width of column 4.*/
-table.fixed td:nth-of-type(5) {width:767px;}/*Setting the width of column 5.*/
-table.fixed td:nth-of-type(6) {width:130px;}/*Setting the width of column 6.*/
-
-.table__header {
-  height: 30px;
-  margin-left: 9px;
-  border-bottom: 2px solid #E0E0E2;
-  font-size: 14px;
-  color: #757575;
-  text-align: left;
-  line-height: 16px;
-}
-
-.table__row {
-  font-family: OpenSans-Regular;
-  font-size: 14px;
-  color: #333333;
-  text-align: left;
-  line-height: 30px;
-  border: 1px solid #E0E0E2;
-  /* border-collapse: collapse; */
-}
-
-.table__row:hover {
-  background-color: #EBF6EA;
-}
-
-.table__row--col-2 {
-  font-family: OpenSans-Bold;
-}
-
-.nav__panel {
-  display: inline-block;
-  padding: 0;
-  margin-top: 24px;
-}
-
-.nav__panel>li {
-  float: left;
-  margin-right: 3px;
-}
-
-.nav__button {
-  width: 32px;
-  height: 32px;
-  border-radius: 3px;
-  font-size: 15px;
-  color: #333333;
-  text-align: center;
-  line-height: 32px;
-  cursor: pointer;
-}
-
-.nav__button :hover {
-  background-color: #EBF6EA;
-}
-
-.nav__button--selected {
-  color: #FFFFFF;
-  background: #333333;
-}
-
-.search__bar {
-  position: relative;
-  margin-bottom: 19px;
-}
-
-.search__field {
-  height: 24px;
-  /* border-bottom: 1px solid #E0E0E2; */
-}
-
-.submit-button {
-  position: absolute;
-  bottom: 0;
-  margin-left: 20px;
-  font-size: 14px;
-  color: #FFFFFF;
-  background-color: #333333;
-  text-align: left;
-  line-height: 20px;
-  border-radius: 5px;
-  cursor: pointer;
 }
