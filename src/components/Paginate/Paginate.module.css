@@ -1,0 +1,40 @@
+#react-paginate ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#react-paginate li {
+    display: inline-block;
+}
+
+.panel {
+    display: inline-block;
+    padding: 0;
+    margin-top: 24px;
+}
+
+.panel>li {
+    float: left;
+    margin-right: 3px;
+}
+
+.button {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.button :hover {
+    background-color: #EBF6EA;
+}
+
+.buttonSelected {
+    color: #FFFFFF;
+    background: #333333;
+}

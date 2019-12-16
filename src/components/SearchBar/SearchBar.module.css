@@ -1,0 +1,21 @@
+.searchBar {
+    position: relative;
+    margin-bottom: 19px;
+}
+
+.searchField {
+    height: 24px;
+}
+
+.submitButton {
+    position: absolute;
+    bottom: 0;
+    margin-left: 140px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #333333;
+    text-align: left;
+    line-height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
