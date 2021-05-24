@@ -6,7 +6,7 @@ import Paginate from './components/Paginate/Paginate';
 import './App.css';
 
 const USER = 'facebook';
-const REP_PER_PAGE = 10
+const REP_PER_PAGE = 10;
 
 function App() {
   const [repos, setRepos] = useState([]);
